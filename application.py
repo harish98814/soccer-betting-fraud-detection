@@ -4,9 +4,18 @@ import pickle
 import numpy as np
 from sklearn.pipeline import Pipeline
 
+import pandas as pd
+
+
+
+headers={
+  "autherization":st.secrets["auth_token"]
+} 
+
 # import the model
 pipe = pickle.load(open('model_bet_2.pkl', 'rb'))
 bet = pickle.load(open('bet_2.pkl', 'rb'))
+
 
 st.title("Fraud Detection")
 
